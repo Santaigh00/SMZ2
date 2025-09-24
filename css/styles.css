@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7e9d0;
+    color: #5c4326;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #d2b48c;
+    color: #3e2c13;
+    padding: 20px 0;
+    text-align: center; /* centra h1 y nav */
+    position: relative; /* permite posicionar el logo */
+}
+
+.logo {
+    width: 80px;
+    position: absolute; /* lo sacamos del flujo */
+    top: 20px;          /* ajusta vertical */
+    left: 50px;         /* lo pegas a la izquierda */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    
+    margin-top: 50px;
+}
+
+nav a {
+    color: #3e2c13;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff8ee;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(90, 70, 40, 0.08);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.placeholder {
+    background-color: #ccc;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 200px;
+    color: #666;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #e6d3b3;
+    color: #a67c52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+img.img1 {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+footer {
+    background: #d2b48c;
+    color: #3e2c13;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+html {
+    overflow-y: scroll; /* siempre reserva espacio para el scroll vertical */
+}
