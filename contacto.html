@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos: conjunto de caracteres y respuesta en pantallas pequeñas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña del navegador -->
+    <title>Motos de Enduro - Contacto</title>
+
+    <!-- Enlace a la hoja de estilos local (ruta relativa) -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- HEADER: contiene logo, título y navegación principal -->
+    <header>
+        <!-- Botón del menú hamburguesa -->
+        <div id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Logo: imagen de la marca SMZ (ajusta la ruta si cambias nombre/carpeta) -->
+        <img src="IMG/logo.png" alt="Logo SMZ" class="logo">
+
+        <!-- Título visible en la cabecera -->
+        <h1>Motos de Enduro</h1>
+
+        <!-- Navegación principal: enlaces a las páginas del sitio
+             Mantén estos enlaces iguales en todas las páginas para navegar fácilmente -->
+        <nav>
+            <!-- Enlace a la página de inicio -->
+            <a href="index.html">Inicio</a>
+
+            <!-- Enlace a la página "Nosotros" -->
+            <a href="nosotros.html">Nosotros</a>
+
+            <!-- Enlace a la página actual (Contacto) -->
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- MAIN: contenido principal de la página -->
+    <main>
+        <!-- Sección de contacto: explicación breve y formulario -->
+        <section>
+            <!-- Título de sección -->
+            <h2>Contacto</h2>
+
+            <!-- Pequeña introducción que invita al usuario a escribir -->
+            <p>¿Tienes dudas o quieres unirte a la comunidad? Escríbenos:</p>
+
+            <!-- FORMULARIO DE CONTACTO
+                 - Añade method="post" y action="/ruta" si vas a procesarlo en un servidor.
+                 - Alternativa sencilla: action="mailto:tucorreo@ejemplo.com" (depende del cliente de correo). -->
+            <form class="contact-form" method="post" action="#">
+                <!-- Campo nombre: texto libre, obligatorio -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <!-- Campo email: validación básica de correo por el navegador, obligatorio -->
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Campo mensaje: área de texto para detalles o consulta -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <!-- Botón de envío: si no hay backend, puedes usar JavaScript para manejar el envío -->
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Nota: puedes añadir más campos (teléfono, asunto) según necesites -->
+        </section>
+    </main>
+
+    <!-- FOOTER: pie de página con derechos o información adicional -->
+    <footer>
+        <!-- Texto legal / de copyright -->
+        <p>&copy; 2025 SMZ Enduro.</p>
+    </footer>
+
+    <!-- Botón para alternar modo oscuro -->
+    <button id="darkModeToggle">🌙 Modo Oscuro</button>
+</body>
+</html>

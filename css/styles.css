@@ -1,0 +1,281 @@
+/* Variables CSS para temas */
+:root {
+    --background: #f7e9d0;
+    --text: #5c4326;
+    --header-bg: #d2b48c;
+    --header-text: #3e2c13;
+    --main-bg: #fff8ee;
+    --shadow: rgba(90, 70, 40, 0.08);
+    --transition: all 0.3s ease;
+}
+
+/* Tema oscuro */
+body.dark-mode {
+    --background: #2d2d2d;
+    --text: #ffffff;  /* Texto blanco para mejor legibilidad */
+    --header-bg: #1a1a1a;  /* Header más oscuro */
+    --header-text: #ffffff;  /* Texto del header en blanco */
+    --main-bg: #1f1f1f;  /* Contenedores oscuros */
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    transition: var(--transition);
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px 0;
+    text-align: center; /* centra h1 y nav */
+    position: relative; /* permite posicionar el logo */
+    transition: var(--transition);
+}
+
+.logo {
+    width: 80px;
+    position: absolute; /* lo sacamos del flujo */
+    top: 20px;          /* ajusta vertical */
+    left: 50px;         /* lo pegas a la izquierda */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    
+    margin-top: 50px;
+}
+
+nav a {
+    color: var(--header-text);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--main-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: var(--transition);
+}
+
+h1, h2 {
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.placeholder {
+    background-color: #ccc;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 200px;
+    color: #666;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #e6d3b3;
+    color: #a67c52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+img.img1 {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+/* Estilos para el menú hamburguesa */
+#menuToggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+#menuToggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: var(--header-text);
+    transition: var(--transition);
+}
+
+/* Botón de modo oscuro */
+#darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: var(--header-bg);
+    color: var(--header-text);
+    cursor: pointer;
+    z-index: 1000;
+    transition: var(--transition);
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    background: var(--main-bg);
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--header-text);
+    box-shadow: 0 0 5px var(--shadow);
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: var(--header-bg);
+    color: var(--header-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-form button:hover {
+    transform: scale(1.02);
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+    color: #ff4444;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.success-content {
+    background: var(--main-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: var(--transition);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    #menuToggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--header-bg);
+        padding: 80px 20px;
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .logo {
+        width: 60px;
+        left: 20px;
+    }
+}
